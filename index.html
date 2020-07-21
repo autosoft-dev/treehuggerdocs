@@ -20,16 +20,12 @@
 
     <section class="main-content">
       <h1>
-<a id="tree-hugger" class="anchor" href="#tree-hugger" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>tree-hugger</h1>
+<a id="welcome-to-tree-hugger" class="anchor" href="#welcome-to-tree-hugger" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to tree-hugger</h1>
 <p>A light-weight, high level, universal code parser built on top of tree-sitter</p>
+<h1>
+<a id="browse-the-documentation" class="anchor" href="#browse-the-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browse the documentation</h1>
 <h2>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages</h2>
-<p>You can use the <a href="https://github.com/autosoft-dev/treehuggerdocs/edit/master/README.md">editor on GitHub</a> to maintain and preview the content for your website in Markdown files.</p>
-<p>Whenever you commit to this repository, GitHub Pages will run <a href="https://jekyllrb.com/">Jekyll</a> to rebuild the pages in your site, from the content in your Markdown files.</p>
-<h2>
-<a id="browse-the-documentation" class="anchor" href="#browse-the-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browse the documentation</h2>
-<h3>
-<a id="installation-and-setup" class="anchor" href="#installation-and-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation and setup</h3>
+<a id="installation-and-setup" class="anchor" href="#installation-and-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation and setup</h2>
 <h3>
 <a id="from-pip" class="anchor" href="#from-pip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>From pip:</h3>
 <p>Just do</p>
@@ -45,8 +41,8 @@ pip install -e .
 </code></pre>
 <p><em>The installation process is tested in macOS Mojave, we have a <a href="https://github.com/autosoft-dev/tree-sitter-docker">separate docker binding</a> for compiling the libraries for Linux and soon this library will be integrated in that as well</em></p>
 <p><em>You may need to install libgit2. In case you are in mac just use <code>brew install libgit2</code></em></p>
-<h2>
-<a id="building-the-so-files" class="anchor" href="#building-the-so-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Building the .so files</h2>
+<h3>
+<a id="building-the-so-files" class="anchor" href="#building-the-so-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Building the .so files</h3>
 <p><em>Please note that building the libraries has been tested under a macOS Mojave with Apple LLVM version 10.0.1 (clang-1001.0.46.4)</em></p>
 <p><em>Please check out our Linux specific instructions <a href="https://github.com/autosoft-dev/tree-sitter-docker">here</a></em></p>
 <p>Once this library is installed it gives you a command line utility to download and compile tree-sitter .so files with ease. As an example -</p>
@@ -67,12 +63,18 @@ optional arguments:
   -l LIB_NAME, --lib-name LIB_NAME
                         The name of the generated .so file
 </code></pre>
-<h3>
-<a id="supported-languages" class="anchor" href="#supported-languages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Supported languages</h3>
-<h3>
-<a id="tutorials" class="anchor" href="#tutorials" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorials</h3>
 <h2>
-<a id="a-quick-example" class="anchor" href="#a-quick-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Quick Example</h2>
+<a id="supported-languages" class="anchor" href="#supported-languages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Supported languages</h2>
+<p>At the moment, Tree-Hugger supports the following languages:</p>
+<ul>
+<li>Python</li>
+<li>PHP</li>
+</ul>
+<p>Because Tree-Hugger is easily expandable, the users can extends the functionality with a custom parser or implement a new one for another language</p>
+<h2>
+<a id="tutorials" class="anchor" href="#tutorials" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorials</h2>
+<h3>
+<a id="a-quick-example" class="anchor" href="#a-quick-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A Quick Example</h3>
 <p>First run the above command to generate the libraries.</p>
 <p>In our settings we just use the <code>-c</code> flag to copy the generated <code>tree-sitter</code> library's <code>.so</code> file to our workspace.
 And once copied, we place it under a directory called <code>tslibs</code> (It is in the .gitignore). But of course, if you are using linux then this command probably won't work and you will need to use our <a href="https://github.com/autosoft-dev/tree-sitter-docker">tree-sitter-docker</a> image and manually copy the final .so file.</p>
@@ -105,8 +107,44 @@ tree-sitter lib path and then the libary will use them automatically. Otherwise,
  <span class="pl-s">'second_child'</span>: <span class="pl-s">'"""<span class="pl-cce">\n</span>        This is second child<span class="pl-cce">\n</span>        """'</span>,
  <span class="pl-s">'my_decorator'</span>: <span class="pl-s">'"""<span class="pl-cce">\n</span>    Outer decorator function<span class="pl-cce">\n</span>    """'</span>,
  <span class="pl-s">'say_whee'</span>: <span class="pl-s">'"""<span class="pl-cce">\n</span>    Hellooooooooo<span class="pl-cce">\n</span><span class="pl-cce">\n</span>    This is a function with decorators<span class="pl-cce">\n</span>    """'</span>}</pre></div>
+<h2>
+<a id="api-reference" class="anchor" href="#api-reference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API reference</h2>
 <h3>
-<a id="api-reference" class="anchor" href="#api-reference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API reference</h3>
+<a id="queries" class="anchor" href="#queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Queries:</h3>
+<p>Queries are s-expressions (Remember LISP?) that works on the parsed code and gives you what you want. They are a great way to fetch arbitary data from the parsed code without having to travel through it recursively.
+Tree-hugger gives you a way to write your queries in yaml file (Check out the <code>queries.yml</code> files in the parsers file to see some examples).</p>
+<p>This main section  is further sub-divded into few (as many as you need, actually) sections. Each of them has the same structure. A name of a query followed by the query itself. Written as an s-expression. One example:</p>
+<pre><code>all_function_docstrings:
+        "
+        (
+            function_definition
+            name: (identifier) @function.def
+            body: (block(expression_statement(string))) @function.docstring
+        )
+        "
+</code></pre>
+<p>Of course, you have to follow yaml grammar while writing these queries. You can see a bit more about writng these queries in the documentation of tree-sitter. <a href="https://tree-sitter.github.io/tree-sitter/using-parsers#pattern-matching-with-queries">Here</a>. Although it is not very intuitive to start with. We are planning to write a detailed tutorial on this subject.</p>
+<h3>
+<a id="parser-class" class="anchor" href="#parser-class" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parser Class:</h3>
+<p>A parser class extends from the BaseParser class. The only mandatory argument that a Parser class should pass to the parent is the <code>language</code>. This is a string. Such as <code>python</code> (remember, lower case). Although, each parser class must
+have the options to take in the path of the tree-sitter library (.so file that we are using to parse the code) and the path to the queries yaml file, in their constructor.</p>
+<p>The BaseParser class can do few things for you.</p>
+<ul>
+<li>
+<p>It loads and prepares the .so file with respect to the language you just mentioned.</p>
+</li>
+<li>
+<p>It loads, parses, and prepares the query yaml file. (for the queries, we internally use an extended UserDict class. More on that later.)</p>
+</li>
+<li>
+<p>It gives an API to parse a file and prepare it for query. <code>BaseParser.parse_file</code></p>
+</li>
+<li>
+<p>It also gives you another (most likely not to be exposed outside) API <code>_run_query_and_get_captures</code> which lets you run any queries and return back the matched results (if any) from the parsed tree.</p>
+</li>
+</ul>
+<p>If you are interested to see the example of one of the methods in the PythonParser class, to know how all of these come together. Here it is (Do not forget, we use those APIs once we have called <code>parse_file</code> and parsed the file) -</p>
+<p>The function <code>match_from_span</code> is a very handy function. It is defined in the BaseParser module. It takes a span definition and returns the underlying code string from it.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/autosoft-dev/treehuggerdocs">Treehuggerdocs</a> is maintained by <a href="https://github.com/autosoft-dev">autosoft-dev</a>.</span>
